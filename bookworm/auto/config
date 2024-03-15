@@ -1,0 +1,5 @@
+#!/bin/sh
+
+#This is a work in progress.
+lb config noauto \
+  --distribution bookworm
