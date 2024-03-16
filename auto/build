@@ -1,0 +1,8 @@
+#!/bin/sh
+
+#This was the default one from /usr/share/doc/live-build/examples/auto
+#I will consider tweaking it later if necessary.
+
+set -e
+
+lb build noauto "${@}" 2>&1 | tee build.log

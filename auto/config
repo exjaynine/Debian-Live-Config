@@ -1,0 +1,16 @@
+#!/bin/sh
+
+set -e
+
+lb config noauto \
+	--distribution bookworm \
+	--architecture amd64 \
+	--debian-installer live \
+	--debian-installer-distribution bookworm \
+	--linux-flavours "amd64" \
+	--archive-areas "main contrib non-free-firmware non-free" \
+	--apt-recommends false \
+	--apt-source-archives true \
+	"${@}"
+
+#Add more stuff later.
